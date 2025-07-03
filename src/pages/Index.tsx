@@ -7,6 +7,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Navigation from "@/components/Navigation";
 import FloatingShapes from "@/components/FloatingShapes";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <Services />
       <Projects />
       <Contact />
+      <Footer />
     </div>
   );
 };
