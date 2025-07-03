@@ -1,18 +1,18 @@
 
 const Skills = () => {
   const technicalSkills = [
-    { name: "HTML", icon: "🌐", level: "Advanced" },
-    { name: "CSS", icon: "🎨", level: "Advanced" },
-    { name: "JavaScript", icon: "⚡", level: "Intermediate" },
-    { name: "React", icon: "⚛️", level: "Intermediate" },
-    { name: "Firebase", icon: "🔥", level: "Intermediate" },
+    { name: "HTML", level: "Advanced", description: "Semantic markup and accessibility" },
+    { name: "CSS", level: "Advanced", description: "Responsive design and animations" },
+    { name: "JavaScript", level: "Intermediate", description: "ES6+ and modern frameworks" },
+    { name: "React", level: "Intermediate", description: "Component-based development" },
+    { name: "Firebase", level: "Intermediate", description: "Backend services and hosting" },
   ];
 
   const softSkills = [
-    { name: "Teamwork", icon: "🤝", description: "Collaborative problem-solving" },
-    { name: "Communication", icon: "💬", description: "Clear and effective interaction" },
-    { name: "Problem Solving", icon: "🧩", description: "Analytical thinking approach" },
-    { name: "Leadership", icon: "👑", description: "Guiding teams to success" },
+    { name: "Teamwork", description: "Collaborative problem-solving and group dynamics" },
+    { name: "Communication", description: "Clear technical documentation and presentation" },
+    { name: "Problem Solving", description: "Analytical thinking and creative solutions" },
+    { name: "Leadership", description: "Project management and team coordination" },
   ];
 
   return (
@@ -33,18 +33,20 @@ const Skills = () => {
             <h3 className="text-3xl font-playfair font-bold text-white mb-8 text-center">
               Technical Skills
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-4">
               {technicalSkills.map((skill, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group text-center">
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
-                    {skill.icon}
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="text-xl font-inter font-semibold text-white">
+                      {skill.name}
+                    </h4>
+                    <span className="text-sm font-inter text-purple-300 bg-purple-400/20 px-3 py-1 rounded-full">
+                      {skill.level}
+                    </span>
                   </div>
-                  <h4 className="text-lg font-inter font-semibold text-white mb-2">
-                    {skill.name}
-                  </h4>
-                  <span className="text-sm font-inter text-purple-300 bg-purple-400/20 px-3 py-1 rounded-full">
-                    {skill.level}
-                  </span>
+                  <p className="text-gray-300 font-inter text-sm">
+                    {skill.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -58,19 +60,12 @@ const Skills = () => {
             <div className="space-y-4">
               {softSkills.map((skill, index) => (
                 <div key={index} className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/50 transition-all duration-300 group">
-                  <div className="flex items-center gap-4">
-                    <div className="text-3xl group-hover:scale-110 transition-transform">
-                      {skill.icon}
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-inter font-semibold text-white mb-1">
-                        {skill.name}
-                      </h4>
-                      <p className="text-gray-300 font-inter text-sm">
-                        {skill.description}
-                      </p>
-                    </div>
-                  </div>
+                  <h4 className="text-xl font-inter font-semibold text-white mb-2">
+                    {skill.name}
+                  </h4>
+                  <p className="text-gray-300 font-inter text-sm">
+                    {skill.description}
+                  </p>
                 </div>
               ))}
             </div>

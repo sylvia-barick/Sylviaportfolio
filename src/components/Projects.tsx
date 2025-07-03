@@ -11,7 +11,8 @@ const Projects = () => {
       sdg: "SDG 3: Good Health and Well-Being",
       color: "from-purple-500 to-pink-500",
       liveUrl: "https://iemmindpal.vercel.app/",
-      imageUrl: "https://i.postimg.cc/NGp1b8J9/Screenshot-1556.png",
+      githubUrl: "https://github.com/debojyoti10CC/iemmindpal",
+      imageUrl: "https://i.postimg.cc/g08bVHW1/Screenshot-1558.png",
       features: [
         "Immersive VR environments",
         "AI-powered therapy sessions",
@@ -24,6 +25,7 @@ const Projects = () => {
       description: "AI-powered recruitment platform with resume screening, emotional analysis in video interviews, and real-time hiring analytics. Optimized hiring efficiency and fairness.",
       techStack: ["React", "AI/ML", "Python", "Firebase", "Analytics"],
       color: "from-blue-500 to-cyan-500",
+      githubUrl: "https://github.com/debojyoti10CC/hexaaa",
       imageUrl: "https://i.postimg.cc/V5y1XGhr/Screenshot-1557.png",
       features: [
         "Automated resume screening",
@@ -106,9 +108,11 @@ const Projects = () => {
                       </a>
                     </Button>
                   )}
-                  <Button variant="outline" className="border-purple-400/50 text-purple-300 hover:bg-purple-400/10 font-inter">
-                    <Github className="mr-2 h-4 w-4" />
-                    View Code
+                  <Button asChild variant="outline" className="border-purple-400/50 text-purple-300 hover:bg-purple-400/10 font-inter">
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
+                      View Code
+                    </a>
                   </Button>
                 </div>
               </div>

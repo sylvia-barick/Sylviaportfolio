@@ -64,8 +64,8 @@ const Hero = () => {
                 <div className="text-purple-300 font-poppins">Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white font-poppins">2+</div>
-                <div className="text-purple-300 font-poppins">Years Learning</div>
+                <div className="text-3xl font-bold text-white font-poppins">1+</div>
+                <div className="text-purple-300 font-poppins">Years Experience</div>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-30 animate-pulse-glow"></div>
               <div className="relative bg-gradient-to-r from-purple-500 to-pink-500 p-1 rounded-full animate-float">
                 <img
-                  src="https://i.postimg.cc/LXkpk8mR/Whats-App-Image-2025-07-01-at-15-49-06.jpg"
+                  src="https://i.postimg.cc/PqPkCn3f/Whats-App-Image-2025-07-01-at-15-49-06.jpg"
                   alt="Sylvia Barick"
                   className="w-80 h-80 md:w-96 md:h-96 rounded-full object-cover bg-gray-800"
                 />
@@ -84,7 +84,7 @@ const Hero = () => {
               
               {/* Floating Elements */}
               <div className="absolute -top-4 -right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-poppins animate-float">
-                8+ Years Experience
+                1+ Years Experience
               </div>
               <div className="absolute -bottom-4 -left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-poppins animate-float" style={{animationDelay: '1s'}}>
                 AI/ML Student
