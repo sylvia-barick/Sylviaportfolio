@@ -65,10 +65,7 @@ const Hero = () => {
                 <div className="text-3xl font-bold text-white font-poppins">5+</div>
                 <div className="text-purple-300 font-poppins">Projects</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white font-poppins">1+</div>
-                <div className="text-purple-300 font-poppins">Years Experience</div>
-              </div>
+              
             </div>
           </div>
 
@@ -85,9 +82,7 @@ const Hero = () => {
               </div>
               
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-poppins animate-float">
-                1+ Years Experience
-              </div>
+              
               <div className="absolute -bottom-4 -left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-poppins animate-float" style={{animationDelay: '1s'}}>
                 AI/ML Student
               </div>

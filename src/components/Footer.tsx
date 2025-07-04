@@ -90,10 +90,10 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 font-inter text-sm">
-            © 2024 Sylvia Barick. All rights reserved.
+            © 2025 Sylvia Barick. All rights reserved.
           </p>
           <p className="text-gray-400 font-inter text-sm">
-            Built with ❤️ using React & Tailwind CSS
+            Built with ❤️ by Sylvia
           </p>
         </div>
       </div>
