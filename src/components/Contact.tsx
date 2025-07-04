@@ -117,7 +117,7 @@ const Contact = () => {
                   <h4 className="text-lg font-poppins font-semibold text-purple-300 mb-2">Social Media</h4>
                   <div className="flex gap-4">
                     <a 
-                      href="https://linkedin.com/in/sylvia-barick-081651321" 
+                      href="https://www.linkedin.com/in/sylvia-barick-081651321/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white hover:scale-110 transition-transform duration-300"

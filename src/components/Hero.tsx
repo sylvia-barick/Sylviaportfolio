@@ -40,6 +40,7 @@ const Hero = () => {
                   variant="outline" 
                   size="lg" 
                   className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                  onClick={() => window.open('https://github.com/sylvia-barick', '_blank')}
                 >
                   <Github className="h-5 w-5" />
                 </Button>
@@ -47,6 +48,7 @@ const Hero = () => {
                   variant="outline" 
                   size="lg" 
                   className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                  onClick={() => window.open('https://www.linkedin.com/in/sylvia-barick-081651321/', '_blank')}
                 >
                   <Linkedin className="h-5 w-5" />
                 </Button>

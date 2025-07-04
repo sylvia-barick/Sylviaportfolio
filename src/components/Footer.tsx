@@ -18,7 +18,7 @@ const Footer = () => {
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/sylvia-barick-081651321",
+      href: "https://www.linkedin.com/in/sylvia-barick-081651321/",
       icon: Linkedin
     },
     {
