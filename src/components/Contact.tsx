@@ -3,8 +3,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,9 +13,10 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
@@ -27,14 +29,55 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({
+        title: "Error",
+        description: "Please enter a valid email address",
+        variant: "destructive"
+      });
+      return;
+    }
 
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init('3SGV1E1WvihAtVWV5');
+
+      // Send email using your service and template IDs
+      const result = await emailjs.send(
+        'service_1plfdid', // Your service ID
+        'template_6w6czla', // Your template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'taniabarick15@gmail.com'
+        }
+      );
+
+      console.log('Email sent successfully:', result);
+
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for your message. I'll get back to you soon!",
+      });
+
+      // Reset form only on successful submission
+      setFormData({ name: '', email: '', message: '' });
+
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      toast({
+        title: "Failed to Send Message",
+        description: "Something went wrong. Please try again or contact me directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -116,6 +159,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   placeholder="Your Name"
                   className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-purple-400"
+                  disabled={isSubmitting}
                 />
               </div>
               
@@ -127,6 +171,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   placeholder="Your Email"
                   className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-purple-400"
+                  disabled={isSubmitting}
                 />
               </div>
               
@@ -138,14 +183,23 @@ const Contact = () => {
                   placeholder="Your Message"
                   rows={5}
                   className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:border-purple-400 resize-none"
+                  disabled={isSubmitting}
                 />
               </div>
               
               <Button 
                 type="submit"
                 className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-poppins"
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  'Send Message'
+                )}
               </Button>
             </form>
           </div>
