@@ -24,7 +24,13 @@ const Services = () => {
       description: "Designing beautiful user interfaces with smooth animations and micro-interactions for enhanced user experience.",
       icon: "🎨",
       color: "from-green-500 to-teal-500"
-    }
+    },
+    {
+  title: "MongoDB Integration & Optimization",
+  description: "Implementing fast, scalable NoSQL database solutions using MongoDB, with optimized queries and robust schema design for modern web applications.",
+  icon: "🍃",
+  color: "from-emerald-600 to-lime-500"
+}
   ];
 
   return (

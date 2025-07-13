@@ -6,6 +6,9 @@ const Skills = () => {
     { name: "JavaScript", level: "Intermediate", description: "ES6+ and modern frameworks" },
     { name: "React", level: "Intermediate", description: "Component-based development" },
     { name: "Firebase", level: "Intermediate", description: "Backend services and hosting" },
+    { name: "MongoDB", level: "Intermediate", description: "NoSQL database management" },
+    { name: "EmailJS", level: "Intermediate", description: "Send emails directly from client-side JavaScript without a backend using EmailJS service integration." },
+    { name: "AI/ML", level: "Beginner", description: "Basic understanding of machine learning concepts" }
   ];
 
   const softSkills = [

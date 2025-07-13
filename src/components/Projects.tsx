@@ -7,11 +7,11 @@ const Projects = () => {
     {
       title: "Mindpal",
       description: "A VR-based mental wellness platform combining therapy with cultural narratives like Gita and Ramayana. Features include immersive environments, AI massage, real-time health monitoring, and support for stress, depression, and more.",
-      techStack: ["React", "VR", "AI", "Firebase", "Node.js"],
+      techStack: ["React", "VR", "AI", "Firebase", "Node.js","MongoDB"],
       sdg: "SDG 3: Good Health and Well-Being",
       color: "from-purple-500 to-pink-500",
-      liveUrl: "https://iemmindpal.vercel.app/",
-      githubUrl: "https://github.com/debojyoti10CC/iemmindpal",
+      liveUrl: "https://mindpal222.vercel.app/",
+      githubUrl: "https://github.com/sylvia-barick/mindpal222",
       imageUrl: "https://i.postimg.cc/g08bVHW1/Screenshot-1558.png",
       features: [
         "Immersive VR environments",
